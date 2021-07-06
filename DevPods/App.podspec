@@ -5,7 +5,7 @@ Pod::Spec.new do |s|
   s.version          = '0.1.0'
   s.summary          = 'ByteDance App Demo.'
   s.description      = 'ByteDance App Demo..'
-  s.homepage         = ''
+  s.homepage         = 'https://github.com/volcengine/ve_Template_iOS'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'duanwenbin' => 'duanwenbin@bytedance.com' }
   s.source           = { :path => '.' }
