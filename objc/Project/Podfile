@@ -39,7 +39,7 @@ def release_pod
       'Network',
       'EventMonitor'
   ]
-  pod 'RangersAppLog', '~> 6.0.0', :subspecs => [
+  pod 'RangersAppLog', :subspecs => [
       'Core',
       'Host/CN',
       'OneKit',
