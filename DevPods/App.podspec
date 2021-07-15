@@ -20,11 +20,13 @@ Pod::Spec.new do |s|
     bd.public_header_files = 'App/Base/**/*.h'
     bd.frameworks = 'Foundation','UIKit'
     bd.dependency 'OneKit/StartUp'
+    bd.dependency 'TTNetworkManager'
   end
 
   s.subspec 'Debug' do |bd|
     bd.source_files = 'App/Debug/**/*.{h,m,c,mm}'
     bd.dependency 'App/Base'
+    bd.dependency 'TTNetworkManager'
   end
 
 end
