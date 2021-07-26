@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		96704B332680835600D5F8A0 /* onekit-config.plist in Resources */ = {isa = PBXBuildFile; fileRef = 96704B322680835600D5F8A0 /* onekit-config.plist */; };
-		96704E9D26821A9400D5F8A0 /* JSPatch.js in Resources */ = {isa = PBXBuildFile; fileRef = 96704E9B26821A9400D5F8A0 /* JSPatch.js */; };
 		C4A5FDFE255EB2A400B85D6E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C4A5FDFD255EB2A400B85D6E /* AppDelegate.m */; };
 		C4A5FE09255EB2A600B85D6E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C4A5FE08255EB2A600B85D6E /* Assets.xcassets */; };
 		C4A5FE0C255EB2A600B85D6E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4A5FE0A255EB2A600B85D6E /* LaunchScreen.storyboard */; };
@@ -21,7 +20,6 @@
 		492A1C54DEE693E63C87E8B4 /* Pods-Template_InHouse.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Template_InHouse.debug.xcconfig"; path = "Target Support Files/Pods-Template_InHouse/Pods-Template_InHouse.debug.xcconfig"; sourceTree = "<group>"; };
 		7A43ED5D6FCCD7166C1CEBA2 /* Pods-Template_InHouse.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Template_InHouse.release.xcconfig"; path = "Target Support Files/Pods-Template_InHouse/Pods-Template_InHouse.release.xcconfig"; sourceTree = "<group>"; };
 		96704B322680835600D5F8A0 /* onekit-config.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "onekit-config.plist"; sourceTree = "<group>"; };
-		96704E9B26821A9400D5F8A0 /* JSPatch.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = JSPatch.js; sourceTree = "<group>"; };
 		C4A5FDFA255EB2A400B85D6E /* Template_InHouse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Template_InHouse.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4A5FDFC255EB2A400B85D6E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		C4A5FDFD255EB2A400B85D6E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -55,30 +53,6 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
-		96704E9826821A9400D5F8A0 /* JSPatch */ = {
-			isa = PBXGroup;
-			children = (
-				96704E9B26821A9400D5F8A0 /* JSPatch.js */,
-			);
-			path = JSPatch;
-			sourceTree = "<group>";
-		};
-		96704F1626821B1A00D5F8A0 /* BDHotfix */ = {
-			isa = PBXGroup;
-			children = (
-				96704E9826821A9400D5F8A0 /* JSPatch */,
-			);
-			path = BDHotfix;
-			sourceTree = "<group>";
-		};
-		96704F1726821B2800D5F8A0 /* Asserts */ = {
-			isa = PBXGroup;
-			children = (
-				96704F1626821B1A00D5F8A0 /* BDHotfix */,
-			);
-			path = Asserts;
-			sourceTree = "<group>";
-		};
 		C4A5FDCD255EB18600B85D6E = {
 			isa = PBXGroup;
 			children = (
@@ -109,7 +83,6 @@
 				C4A5FE0E255EB2A600B85D6E /* main.m */,
 				C4A5FE19255EB2F100B85D6E /* FlutterAppDelegate.h */,
 				C4A5FE1A255EB2F100B85D6E /* FlutterAppDelegate.m */,
-				96704F1726821B2800D5F8A0 /* Asserts */,
 			);
 			path = Template_InHouse;
 			sourceTree = "<group>";
@@ -133,7 +106,6 @@
 				C4A5FDF6255EB2A400B85D6E /* Sources */,
 				C4A5FDF7255EB2A400B85D6E /* Frameworks */,
 				C4A5FDF8255EB2A400B85D6E /* Resources */,
-				57FC3BD52DA5A00A87780401 /* [CP] Embed Pods Frameworks */,
 				2650492B6819802D06BFBE1E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
@@ -184,7 +156,6 @@
 			files = (
 				C4A5FE0C255EB2A600B85D6E /* LaunchScreen.storyboard in Resources */,
 				C4A5FE09255EB2A600B85D6E /* Assets.xcassets in Resources */,
-				96704E9D26821A9400D5F8A0 /* JSPatch.js in Resources */,
 				96704B332680835600D5F8A0 /* onekit-config.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -227,21 +198,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		57FC3BD52DA5A00A87780401 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Template_InHouse/Pods-Template_InHouse-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */

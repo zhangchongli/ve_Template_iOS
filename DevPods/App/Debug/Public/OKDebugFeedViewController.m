@@ -31,6 +31,9 @@
 # if __has_include("BTDEntryViewController.h")
 #  include "BTDEntryViewController.h"
 # endif
+# if __has_include("BDHTestViewController.h")
+#  include "BDHTestViewController.h"
+# endif
 #endif
 
 static NSString *const kOKStartUpDebugAppID     = @"kOKStartUpDebugAppID";
@@ -100,7 +103,17 @@ static NSString *const kOKStartUpDebugAppName   = @"kOKStartUpDebugAppName";
 # if __has_include("BTDEntryViewController.h")
     [self addFeedEntry:@"H5 服务" forViewController:BTDEntryViewController.class];
 # endif
+    
+    
+# if __has_include("BDHTestViewController.h")
+    [self addFeedEntry:@"热修复测试" forViewController:BDHTestViewController.class];
+# endif
+    
+    
 #endif
+    
+    
+    
     
     
     

@@ -24,7 +24,7 @@ Pod::Spec.new do |s|
   end
 
   s.subspec 'Debug' do |bd|
-    bd.source_files = 'App/Debug/**/*.{h,m,c,mm}'
+    bd.source_files = 'App/Debug/**/*.{h,m,c,mm,js}'
     bd.dependency 'App/Base'
     bd.dependency 'TTNetworkManager'
   end
