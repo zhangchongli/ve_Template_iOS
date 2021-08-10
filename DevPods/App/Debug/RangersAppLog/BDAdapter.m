@@ -11,18 +11,17 @@
 #import <RangersAppLog/BDKeyWindowTracker.h>
 #import <RangersAppLog/RangersAppLog.h>
 #import <RangersAppLog/BDAutoTrackURLHostItemCN.h>
-#import <RangersAppLog/RangersAppLogStartUpTask.h>
 #import <OneKit/OKStartUpTask.h>
 #import <OneKit/OKApplicationInfo.h>
 #import <OneKit/OKStartUpFunction.h>
 
 static NSString *const BDDebugAppID = @"12345678";
 
-
- OKAppTaskAddFunction() {
-     [[RangersAppLogStartUpTask new] scheduleTask];
- }
-
+OKAppTaskAddFunction() {
+    Class task = NSClassFromString(@"RangersAppLogStartUpTask");
+    id obj = [task new];
+    [obj performSelector:@selector(scheduleTask)];
+}
 @implementation BDAdapter
 
 #pragma mark - start track
