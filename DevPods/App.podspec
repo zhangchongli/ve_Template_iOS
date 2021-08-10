@@ -14,7 +14,7 @@ Pod::Spec.new do |s|
   s.static_framework = true
   s.default_subspecs = 'Base', 'Debug'
   s.pod_target_xcconfig = { 'DEFINES_MODULE' => 'YES'}
-  
+
   s.subspec 'Base' do |bd|
     bd.source_files = 'App/Base/**/*.{h,m,c}'
     bd.public_header_files = 'App/Base/**/*.h'
@@ -28,6 +28,7 @@ Pod::Spec.new do |s|
     bd.resources = 'App/Debug/**/*.js'
     bd.dependency 'App/Base'
     bd.dependency 'TTNetworkManager'
+    bd.dependency 'OneKit/Defaults'
   end
 
 end
