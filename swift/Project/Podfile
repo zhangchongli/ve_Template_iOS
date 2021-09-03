@@ -13,7 +13,7 @@ source 'https://cdn.cocoapods.org/'
 source 'https://github.com/volcengine/volcengine-specs.git'
 
 def release_pod
-  pod 'OneKit', :subspecs => [
+  pod 'OneKit',:subspecs => [
     'BaseKit',
     'Defaults',
     'Database',
@@ -25,7 +25,7 @@ def release_pod
   ]
   pod 'VEH5Kit'
   pod 'BDHotfix'
-  pod 'TTNetworkManager', '5.0.29.23'
+  pod 'TTNetworkManager'
   pod 'RangersAPM', '>=2.0.0', :subspecs => [
       'Crash',
       'WatchDog',
@@ -39,7 +39,7 @@ def release_pod
       'Network',
       'EventMonitor'
   ]
-  pod 'RangersAppLog', '~> 6.0.0', :subspecs => [
+  pod 'RangersAppLog','6.3.0-rc.2', :subspecs => [
       'Core',
       'Host/CN',
       'OneKit',
