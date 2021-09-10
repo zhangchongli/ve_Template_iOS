@@ -38,7 +38,8 @@ def release_pod
       'Hybrid',
       'MemoryGraph',
       'Network',
-      'EventMonitor'
+      'EventMonitor',
+      'CN',
   ]
   pod 'RangersAppLog', :subspecs => [
       'Core',
