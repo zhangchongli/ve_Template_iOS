@@ -25,6 +25,7 @@ def release_pod
     'StartUp',
     'Screenshot'
   ]
+  pod 'VEPush'
   pod 'VEH5Kit'
   pod 'BDHotfix'
   pod 'TTNetworkManager'

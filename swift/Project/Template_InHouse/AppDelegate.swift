@@ -24,7 +24,7 @@ import SwiftOneKit
     override func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
-        OneKitApp.start()
+        OneKitApp.startApplication(self, withLaunchOptions:launchOptions)
         OKSwiftLog.debug("AppDelegate", "Test log")
         
         return super.application(application, didFinishLaunchingWithOptions: launchOptions)
