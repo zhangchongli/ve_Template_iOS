@@ -20,7 +20,7 @@
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    [OneKitApp startApplication:self  withLaunchOptions:launchOptions];
+    [OneKitApp startWithLaunchOptions:launchOptions];
     OKLOG_PROTOCOL_DEBUG_TAG(@"TAG", @"Test log %@",launchOptions);
     return [super application:application didFinishLaunchingWithOptions:launchOptions];
 }
