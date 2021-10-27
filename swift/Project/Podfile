@@ -53,6 +53,10 @@ def release_pod
       'Unique'
     ]
   pod 'SwiftOneKit'
+  pod 'VEAppUpdateHelper', :subspecs => [
+      'VEUpdateHelper',
+      'VEUpdateView'
+   ]
 end
 
 def ov_pod
