@@ -8,7 +8,6 @@
 
 #import "BDHTestViewController.h"
 #import <BDHotfix/BDHotfix.h>
-#import "ExampleJSPatchApplyer.h"
 
 @interface BDHTestViewController ()
 
@@ -21,7 +20,7 @@
 
 + (void)load
 {
-    [[BDHotfix sharedInstance] setPatchApplyer:[ExampleJSPatchApplyer new]];
+//    [[BDHotfix sharedInstance] setPatchApplyer:[ExampleJSPatchApplyer new]];
 }
 
 - (void)viewDidLoad {
